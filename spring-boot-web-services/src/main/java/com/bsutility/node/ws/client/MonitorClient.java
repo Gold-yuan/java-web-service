@@ -1,10 +1,10 @@
 package com.bsutility.node.ws.client;
 
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
-import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.soap.client.core.SoapActionCallback;
 
-import com.bsutility.node.ws.*;
+import com.bsutility.node.ws.GetMonitorRequest;
+import com.bsutility.node.ws.GetMonitorResponse;
 
 public class MonitorClient extends WebServiceGatewaySupport {
 	
