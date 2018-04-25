@@ -25,14 +25,10 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.ws</groupId>
-			<artifactId>spring-ws-core</artifactId>
-		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
+			<!-- 自动生成服务端类插件 -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jaxb2-maven-plugin</artifactId>
@@ -51,6 +47,38 @@
 					<clearOutputDir>false</clearOutputDir>
 				</configuration>
 			</plugin>
+			
+			<!-- 自动生成客户端类插件
+				先启动webservice服务，才能生成
+			 -->
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.springframework.boot</groupId> -->
+<!-- 				<artifactId>spring-boot-maven-plugin</artifactId> -->
+<!-- 			</plugin> -->
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.jvnet.jaxb2.maven2</groupId> -->
+<!-- 				<artifactId>maven-jaxb2-plugin</artifactId> -->
+<!-- 				<version>0.13.2</version> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<goals> -->
+<!-- 							<goal>generate</goal> -->
+<!-- 						</goals> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 				<configuration> -->
+<!-- 					<schemaLanguage>WSDL</schemaLanguage> -->
+<!-- 					<generatePackage>ws.wsdl</generatePackage> -->
+<!-- 					<schemas> -->
+<!-- 						<schema> -->
+<!-- 							<url>http://localhost:8080/ws/countries.wsdl</url> -->
+<!-- 						</schema> -->
+<!-- 						<schema> -->
+<!-- 							<url>http://localhost:8080/ws/users.wsdl</url> -->
+<!-- 						</schema> -->
+<!-- 					</schemas> -->
+<!-- 				</configuration> -->
+<!-- 			</plugin> -->
 		</plugins>
 	</build>
 </project>

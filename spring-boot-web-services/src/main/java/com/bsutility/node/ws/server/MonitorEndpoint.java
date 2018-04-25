@@ -10,6 +10,9 @@ import com.bsutility.node.ws.GetMonitorRequest;
 import com.bsutility.node.ws.GetMonitorResponse;
 
 /**
+ * webservice 实现类
+ * 
+ * 
  * @author adminytf
  *
  */

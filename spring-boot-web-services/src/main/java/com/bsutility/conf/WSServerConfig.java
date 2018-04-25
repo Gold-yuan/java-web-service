@@ -12,6 +12,11 @@ import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
 
+/**
+ * webservice 服务端配置
+ * 
+ * @author adminytf
+ */
 @EnableWs
 @Configuration
 public class WSServerConfig extends WsConfigurerAdapter {
@@ -20,6 +25,7 @@ public class WSServerConfig extends WsConfigurerAdapter {
 		MessageDispatcherServlet servlet = new MessageDispatcherServlet();
 		servlet.setApplicationContext(applicationContext);
 		servlet.setTransformWsdlLocations(true);
+		// 设置访问根路径
 		return new ServletRegistrationBean(servlet, "/ws/*");
 	}
 

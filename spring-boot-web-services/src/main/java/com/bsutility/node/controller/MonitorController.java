@@ -15,7 +15,7 @@ import com.bsutility.node.ws.client.MonitorClient;
 @Controller
 @RequestMapping("/wsc")
 public class MonitorController {
-
+	
 	@Autowired
 	private MonitorClient monitorClient;
 
