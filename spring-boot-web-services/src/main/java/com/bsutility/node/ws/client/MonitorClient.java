@@ -17,5 +17,13 @@ public class MonitorClient extends WebServiceGatewaySupport {
 
 		return response;
 	}
+	public GetMonitorResponse getContainer(String nodeIp) {
+		GetMonitorRequest request = new GetMonitorRequest();
+		request.setNodeIp(nodeIp);
+		GetMonitorResponse response = (GetMonitorResponse) getWebServiceTemplate().marshalSendAndReceive(URI, request,
+				new SoapActionCallback(SOAPACTION));
+		
+		return response;
+	}
 
 }

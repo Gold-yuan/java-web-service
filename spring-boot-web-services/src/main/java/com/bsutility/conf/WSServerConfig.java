@@ -28,11 +28,12 @@ public class WSServerConfig extends WsConfigurerAdapter {
 		// 设置访问根路径
 		return new ServletRegistrationBean(servlet, "/ws/*");
 	}
-
+	
 	@Bean(name = "monitor")
 	public DefaultWsdl11Definition defaultWsdl11DefinitionUser() {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
 		wsdl11Definition.setPortTypeName("MonitorPort");
+		// 设置访问路径 http://localhost:8080/ws/monitor.wsdl
 		wsdl11Definition.setLocationUri("/ws");
 		wsdl11Definition.setTargetNamespace("http://ws.node.bsutility.com");
 		wsdl11Definition.setSchema(monitorSchema());

@@ -31,12 +31,4 @@ public class MonitorEndpoint {
 		response.setContainers(monitorRepository.getNodeContainerList(request.getNodeIp()));
 		return response;
 	}
-
-	@PayloadRoot(namespace = "http://ws.bsutility.com/ws/schema", localPart = "getContainer")
-	@ResponsePayload
-	public String getContainer(@RequestPayload String nodeIp) {
-		System.out.println("进入action2");
-
-		return monitorRepository.getNodeContainerLists(nodeIp);
-	}
 }

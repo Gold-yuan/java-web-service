@@ -12,9 +12,4 @@ public class MonitorRepository {
 
 		return "通了" + nodeIp;
 	}
-
-	public String getNodeContainerLists(String nodeIp) {
-		
-		return "通了s" + nodeIp;
-	}
 }
