@@ -22,6 +22,12 @@ public class WSClientConfig {
 		return marshaller;
 	}
 
+	/**
+	 * 注入客户端实例，以便controller调用
+	 * 
+	 * @param marshaller
+	 * @return
+	 */
 	@Bean("monitorClient")
 	public MonitorClient counrtyClient(Jaxb2Marshaller marshaller) {
 		MonitorClient client = new MonitorClient();

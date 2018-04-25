@@ -28,7 +28,12 @@ public class WSServerConfig extends WsConfigurerAdapter {
 		// 设置访问根路径
 		return new ServletRegistrationBean(servlet, "/ws/*");
 	}
-	
+
+	/**
+	 * 注入服务实例，用于发布wsdl
+	 * 
+	 * @return
+	 */
 	@Bean(name = "monitor")
 	public DefaultWsdl11Definition defaultWsdl11DefinitionUser() {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();

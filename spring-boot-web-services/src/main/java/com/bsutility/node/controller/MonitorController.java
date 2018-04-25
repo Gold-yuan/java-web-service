@@ -15,7 +15,7 @@ import com.bsutility.node.ws.client.MonitorClient;
 @Controller
 @RequestMapping("/wsc")
 public class MonitorController {
-	
+
 	@Autowired
 	private MonitorClient monitorClient;
 
@@ -29,8 +29,8 @@ public class MonitorController {
 	@RequestMapping("/get")
 	public String getws() {
 
-		String MonitorName = "Spain";
-		GetMonitorResponse response = monitorClient.getMonitor(MonitorName);
+		String req = "唱征服";
+		GetMonitorResponse response = monitorClient.getMonitor(req);
 		System.out.println("response: " + response.getContainers());
 
 		return "success";
