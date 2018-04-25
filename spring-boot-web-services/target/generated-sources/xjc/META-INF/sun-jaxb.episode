@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
+  <!--
+
+此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+在重新编译源模式时, 对此文件的所有修改都将丢失。
+生成时间: 2018.04.23 时间 02:15:00 PM CST 
+
+  -->
+  <bindings xmlns:tns="http://ytf.sichuan/ws/molitor" if-exists="true" scd="x-schema::tns">
+    <schemaBindings map="false">
+      <package name="ws.wsdl"/>
+    </schemaBindings>
+    <bindings if-exists="true" scd="tns:getCountryRequest">
+      <class ref="ws.wsdl.GetCountryRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getCountryResponse">
+      <class ref="ws.wsdl.GetCountryResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:country">
+      <class ref="ws.wsdl.Country"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getUserRequest">
+      <class ref="ws.wsdl.GetUserRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getUserResponse">
+      <class ref="ws.wsdl.GetUserResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:user">
+      <class ref="ws.wsdl.User"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:language">
+      <class ref="ws.wsdl.Language"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:currency">
+      <typesafeEnumClass ref="ws.wsdl.Currency"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:gender">
+      <typesafeEnumClass ref="ws.wsdl.Gender"/>
+    </bindings>
+  </bindings>
+</bindings>
